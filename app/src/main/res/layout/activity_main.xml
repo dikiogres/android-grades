@@ -1,0 +1,153 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="398dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/modulName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Auswahl >>"
+                android:textAlignment="center"
+                android:textSize="22sp" />
+
+            <View
+                android:id="@+id/separatorHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@android:color/darker_gray"
+                android:visibility="visible" />
+
+            <ListView
+                android:id="@+id/notenList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp">
+
+            </ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/separatorHorizontal2"
+                android:layout_width="match_parent"
+                android:layout_height="2.5dp"
+                android:background="@android:color/darker_gray"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Min Note" />
+
+                <TextView
+                    android:id="@+id/minNote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:hint="3.8" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView"
+                    android:text="End Note" />
+
+                <TextView
+                    android:id="@+id/maxNote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/minNote"
+                    android:layout_marginRight="10dp"
+                    android:hint="6.0" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/gewunschteNote"
+                    android:layout_width="148dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="1dp"
+                    android:hint="@string/gewunschte_note"
+                    android:inputType="numberDecimal"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@+id/wantedGrade"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginRight="10dp"
+                    android:onClick="setWantedGrade"
+                    android:src="@android:drawable/ic_menu_save" />
+
+                <ImageButton
+                    android:id="@+id/newNoteButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginRight="10dp"
+                    android:onClick="addNewGrade"
+                    android:src="@android:drawable/ic_input_add" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separatorVertical"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"
+        android:visibility="visible" />
+
+    <ListView
+        android:id="@+id/theListDesign"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+</LinearLayout>
